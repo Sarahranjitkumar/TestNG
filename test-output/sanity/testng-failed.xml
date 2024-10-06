@@ -14,6 +14,7 @@
         <methods>
           <include name="SetUpDriver"/>
           <include name="CloseExcel"/>
+          <include name="TC02_LoginSuccessTest"/>
           <include name="TearDown"/>
           <include name="SetUpExcel"/>
           <include name="TC01_LoginFailureTest"/>
