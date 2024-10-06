@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="7" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-06T15:25:02Z" name="sanity" finished-at="2024-10-06T15:26:05Z" duration-ms="63028">
+    <groups>
+      <group name="sanity">
+        <method signature="LoginTest.TC01_LoginFailureTest()[pri:0, instance:Testcases.LoginTest@610f7aa]" name="TC01_LoginFailureTest" class="Testcases.LoginTest"/>
+        <method signature="LoginTest.TC02_LoginSuccessTest()[pri:0, instance:Testcases.LoginTest@610f7aa]" name="TC02_LoginSuccessTest" class="Testcases.LoginTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2024-10-06T15:25:02Z" name="Test" finished-at="2024-10-06T15:26:05Z" duration-ms="63028">
+      <class name="Testcases.LoginTest">
+        <test-method is-config="true" signature="SetUpDriver()[pri:0, instance:Testcases.LoginTest@610f7aa]" started-at="2024-10-06T15:25:02Z" name="SetUpDriver" finished-at="2024-10-06T15:25:21Z" duration-ms="19184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUpDriver -->
+        <test-method signature="TC01_LoginFailureTest()[pri:0, instance:Testcases.LoginTest@610f7aa]" started-at="2024-10-06T15:25:21Z" name="TC01_LoginFailureTest" description="Login Failiure Test" finished-at="2024-10-06T15:25:44Z" duration-ms="22594" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [The email or password you have entered is invalid.] but found [The email or password you have entered is invalid]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [The email or password you have entered is invalid.] but found [The email or password you have entered is invalid]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at pages.loginpage.ValidateErrorMsg(loginpage.java:57)
+at Testcases.LoginTest.TC01_LoginFailureTest(LoginTest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_LoginFailureTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Testcases.LoginTest@610f7aa]" started-at="2024-10-06T15:25:45Z" name="TearDown" finished-at="2024-10-06T15:25:45Z" duration-ms="284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="SetUpDriver()[pri:0, instance:Testcases.LoginTest@610f7aa]" started-at="2024-10-06T15:25:45Z" name="SetUpDriver" finished-at="2024-10-06T15:25:51Z" duration-ms="5912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUpDriver -->
+        <test-method signature="TC02_LoginSuccessTest()[pri:0, instance:Testcases.LoginTest@610f7aa]" started-at="2024-10-06T15:25:51Z" name="TC02_LoginSuccessTest" description="Login Success Test" finished-at="2024-10-06T15:26:04Z" duration-ms="13405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_LoginSuccessTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:Testcases.LoginTest@610f7aa]" started-at="2024-10-06T15:26:04Z" name="TearDown" finished-at="2024-10-06T15:26:05Z" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- Testcases.LoginTest -->
+      <class name="Testcases.HomePageTest">
+        <test-method is-config="true" signature="SetUpExcel()[pri:0, instance:Testcases.HomePageTest@683dbc2c]" started-at="2024-10-06T15:25:02Z" name="SetUpExcel" finished-at="2024-10-06T15:25:02Z" duration-ms="660" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUpExcel -->
+        <test-method is-config="true" signature="CloseExcel()[pri:0, instance:Testcases.HomePageTest@683dbc2c]" started-at="2024-10-06T15:26:05Z" name="CloseExcel" finished-at="2024-10-06T15:26:05Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseExcel -->
+      </class> <!-- Testcases.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- sanity -->
+</testng-results>

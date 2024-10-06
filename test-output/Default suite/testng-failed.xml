@@ -7,7 +7,6 @@
         <methods>
           <include name="TearDown"/>
           <include name="TC01_LoginFailureTest"/>
-          <include name="TC02_LoginSuccessTest"/>
           <include name="SetUpDriver"/>
         </methods>
       </class> <!-- Testcases.LoginTest -->
