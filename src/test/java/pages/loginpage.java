@@ -11,7 +11,7 @@ import Testcases.BaseClass;
 
 public class loginpage {
 	
-	WebDriver driver = BaseClass.driver;
+	WebDriver driver;
 	
 	
 	//==================== Locators ======================
@@ -30,15 +30,15 @@ public class loginpage {
 	
 	@FindBy(name = "btn_login")
 	WebElement LoginBtn;
-
+	
 	@FindBy(className = "error_msg")
 	WebElement Error;
-
 	
 	//====================== Functions =====================
 	
-	public loginpage() {
+	public loginpage(WebDriver driver) {
 		
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -50,11 +50,12 @@ public class loginpage {
 		RememberMe.click();
 		LoginBtn.click();
 	}
-
-public void ValidateErrorMsg(String ExpMsg) {
+	
+	public void ValidateErrorMsg(String ExpMsg) {
 		
 		String ActMsg = Error.getText();
 		Assert.assertEquals(ExpMsg, ActMsg);	
 	}
+
 }
 

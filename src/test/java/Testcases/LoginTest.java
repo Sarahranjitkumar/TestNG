@@ -19,16 +19,18 @@ public class LoginTest extends BaseClass{
 	@Test(groups = {"sanity"},description="Login Failiure Test")
 	public void TC01_LoginFailureTest() {
 		
-		loginpage lp = new loginpage();
+		loginpage lp = new loginpage(GetDriver());
+
 		lp.LoginFunction("abc@xyz.com", "Abcd@1234");
-		lp.ValidateErrorMsg("The email or password you have entered is invalid");
+		lp.ValidateErrorMsg("The email or password you have entered is invalid.");
 		
 	}
 	
 	@Test(groups = {"sanity"},description="Login Success Test")
 	public void TC02_LoginSuccessTest() {
 		
-		loginpage lp = new loginpage();
+		loginpage lp = new loginpage(GetDriver());
+
 		lp.LoginFunction("pqr@xyz.com", "Correct@1234");
 		
 	}
@@ -38,7 +40,8 @@ public class LoginTest extends BaseClass{
 	@Parameters({"param1","param2"})
 	public void TC03_LoginSuccessTest(String Uname, String Pwd) {
 		
-		loginpage lp = new loginpage();
+		loginpage lp = new loginpage(GetDriver());
+
 		lp.LoginFunction(Uname, Pwd);
 		
 	}
@@ -49,14 +52,16 @@ Map<String, String> testdata = new HashMap<String, String>();
 	@Test(dataProvider="dp")
 	public void TC04_LoginSuccessTest(String key) {
 		
-		loginpage lp = new loginpage();
+		loginpage lp = new loginpage(GetDriver());
+
 		lp.LoginFunction(key, testdata.get(key));
 		
 	}
 	@Test
        public void TC05_LoginFailureTest() {
 		
-		loginpage lp = new loginpage();
+		loginpage lp = new loginpage(GetDriver());
+
 		
 		String UserNameVal = sheet.getRow(1).getCell(0).getStringCellValue();
 		String PasswordVal = sheet.getRow(1).getCell(1).getStringCellValue();
@@ -68,8 +73,6 @@ Map<String, String> testdata = new HashMap<String, String>();
 	}
 
 
-
-	
 	
 	@DataProvider(name = "dp")
 	public Iterator<String> method1() {
